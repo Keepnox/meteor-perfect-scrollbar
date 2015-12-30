@@ -13,9 +13,13 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
-  api.addFiles('js/perfect-scrollbar.js');
-  api.addFiles('js/perfect-scrollbar.jquery.js');
-  api.addFiles('css/perfect-scrollbar.css');
+
+  api.addFiles([
+    'css/perfect-scrollbar.css',
+    'js/perfect-scrollbar.js',
+    'js/perfect-scrollbar.jquery.js'
+  ], 'client');
+  
 });
 
 Package.onTest(function(api) {
